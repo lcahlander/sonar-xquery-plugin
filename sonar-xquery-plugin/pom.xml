@@ -13,12 +13,12 @@
   <packaging>jar</packaging>
 
   <dependencies>
-    <!-- SonarQube Plugin API -->
+    <!-- SonarQube Plugin API (moved to new coordinates) -->
     <dependency>
-      <groupId>org.sonarsource.sonarqube</groupId>
+      <groupId>org.sonarsource.api.plugin</groupId>
       <artifactId>sonar-plugin-api</artifactId>
       <version>${sonar.plugin.api.version}</version>
-      <scope>provided</scope>
+      <scope>compile</scope>
     </dependency>
 
     <!-- runtime dependency required by code that uses ANTLR parser at runtime -->
@@ -75,6 +75,15 @@
                   <mainClass>org.sonar.xquery.tools.XQueryCli</mainClass>
                 </transformer>
               </transformers>
+              <!-- avoid shading the Sonar plugin API -->
+              <filters>
+                <filter>
+                  <artifact>org.sonarsource.api.plugin:sonar-plugin-api</artifact>
+                  <excludes>
+                    <exclude>*</exclude>
+                  </excludes>
+                </filter>
+              </filters>
             </configuration>
           </execution>
         </executions>
