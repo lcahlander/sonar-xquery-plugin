@@ -1,33 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-           http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project>
   <modelVersion>4.0.0</modelVersion>
-
-  <groupId>io.github.lcahlander</groupId>
+  <groupId>org.lcahlander.sonar</groupId>
   <artifactId>sonar-xquery-plugin</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>Sonar XQuery Plugin Parent</name>
-
-  <modules>
-    <module>sonar-xquery-plugin</module>
-  </modules>
-
-  <properties>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <sonar.plugin.api.version>9.8.0.56709</sonar.plugin.api.version>
-    <antlr4.version>4.13.0</antlr4.version>
-  </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.antlr</groupId>
-        <artifactId>antlr4</artifactId>
-        <version>${antlr4.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 </project>
