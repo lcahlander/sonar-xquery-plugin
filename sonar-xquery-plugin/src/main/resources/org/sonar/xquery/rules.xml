@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <rule key="forbidden-update">
+    <name>Avoid 'update' expression</name>
+    <description>Flags use of the 'update' keyword (example rule)</description>
+    <severity>MAJOR</severity>
+    <tags>
+      <tag>bug</tag>
+      <tag>convention</tag>
+    </tags>
+  </rule>
+</rules>
