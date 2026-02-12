@@ -1,7 +1,6 @@
 package org.sonar.xquery;
 
 import org.sonar.api.resources.Language; // older API compatibility placeholder
-import org.sonar.api.server.profile.LanguageQualityProfile; // not used yet
 
 // Sonar modern API uses org.sonar.api.server.language.LanguageProperties; we keep a tiny class to host the language key.
 
