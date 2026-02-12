@@ -10,5 +10,5 @@ package org.sonar.xquery.rules;
  */
 public final class ForbiddenUpdateRule {
   public static final String KEY = "forbidden-update";
-  private ForbiddenUpdateRule() {}
+  public ForbiddenUpdateRule() {}
 }

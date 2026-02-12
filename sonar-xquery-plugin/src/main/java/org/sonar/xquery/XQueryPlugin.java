@@ -8,7 +8,8 @@ public class XQueryPlugin implements Plugin {
   public void define(Context context) {
     context.addExtensions(Arrays.asList(
       XQueryLanguage.class,
-      org.sonar.xquery.rules.XQueryRulesDefinition.class
+      org.sonar.xquery.rules.XQueryRulesDefinition.class,
+            org.sonar.xquery.sensor.XQuerySensor.class
       // add Sensors / Check classes here later
     ));
   }

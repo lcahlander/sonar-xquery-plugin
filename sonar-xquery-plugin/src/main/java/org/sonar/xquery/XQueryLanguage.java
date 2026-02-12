@@ -1,13 +1,24 @@
 package org.sonar.xquery;
 
-import org.sonar.api.resources.Language; // older API compatibility placeholder
+import org.sonar.api.resources.Language;
 
-// Sonar modern API uses org.sonar.api.server.language.LanguageProperties; we keep a tiny class to host the language key.
-
-public final class XQueryLanguage {
+public final class XQueryLanguage implements Language {
   public static final String KEY = "xquery";
   public static final String NAME = "XQuery";
   public static final String[] FILE_SUFFIXES = {"xq", "xql", "xqm", "xqy"};
 
-  private XQueryLanguage() {}
+  @Override
+  public String getKey() {
+    return KEY;
+  }
+
+  @Override
+  public String getName() {
+    return NAME;
+  }
+
+  @Override
+  public String[] getFileSuffixes() {
+    return FILE_SUFFIXES.clone();
+  }
 }
